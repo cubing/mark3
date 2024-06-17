@@ -1,0 +1,21 @@
+{
+  "name": "@cubing/mark3",
+  "module": "src/server/main.ts",
+  "type": "module",
+  "devDependencies": {
+    "@biomejs/biome": "^1.7.2",
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "scripts": {
+    "dev": "bun run \"src/scramble-generation/index.ts\"",
+    "lint": "npx @biomejs/biome check ./src",
+    "format": "npx @biomejs/biome format --write ./src"
+  },
+  "dependencies": {
+    "@wca/helpers": "^1.1.5",
+    "cubing": "^0.48.4"
+  }
+}
