@@ -1,4 +1,3 @@
-import type { Competition } from "@wca/helpers";
 import type { CompetitionScramblesSpecJSON } from "../types/scrambles";
 
 export const testCompetitionScramblesSpec: CompetitionScramblesSpecJSON = {

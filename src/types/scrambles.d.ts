@@ -1,11 +1,11 @@
 // TODO: figure out how to reconcile `@wca/helpers` with TNoodle output.
 
-import type { EventId, RoundFormat } from "@wca/helpers";
+import type { ActivityCode, EventId, RoundFormat } from "@wca/helpers";
 
 type EncryptedJSON = string;
 
 type ExtendedEventId =
-  | EventID
+  | EventId
   | "fto"
   | "fto"
   | "master_tetraminx"
@@ -54,7 +54,7 @@ export interface PartialCompetitionScramblesJSON<T> {
 
 ////////////////
 
-interface Extension<ID, DATA extends Record> {
+interface Extension<ID, DATA extends Record<any, any>> {
   id: ID;
   specUrl: "";
   data: DATA;

@@ -1,10 +1,8 @@
-import type { Competition, RoundFormat } from "@wca/helpers";
+import { stdout } from "node:process";
+import type { RoundFormat } from "@wca/helpers";
 import { randomScrambleForEvent } from "cubing/scramble";
 import { testCompetitionScramblesSpec } from "../fixtures/testCompetitionScramblesSpec";
 import type { CompetitionScramblesSpecJSON } from "../types/scrambles";
-
-// biome-ignore lint/suspicious/noExplicitAny: <explanation>
-type TODO = any;
 
 function numAttempts(roundFormat: RoundFormat): number {
   return {
@@ -31,7 +29,7 @@ export async function generateScrambles(
           attemptIndex < numAttempts(round.format);
           attemptIndex++
         ) {
-          console.write(
+          stdout.write(
             `[${event.id}][${round.id}][scramble set ${scrambleSetIndex}][attempt ${attemptIndex}] `,
           );
           // TODO: seed derivation.
